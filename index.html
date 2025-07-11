@@ -5,33 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css"/>
   
   <title>Frontend Mentor | Age calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Day
-  DD
+  <div class="flex">
+    <section class="formContainer">
+      <form id="ageForm" novalidate>
+        <div class="input" for="dayInput">
+          <label for="day">DAY</label>
+          <input type="text" id="day" maxlength="2" pattern="^(0?[1-9]|[12][0-9]|3[01])$" title="Please enter a valid day (1-31)" placeholder="DD" required/>
+          <p id='dayError' class="errorMessage"></p>
+        </div>
+        <div class="input" for="monthInput">
+          <label for="month">MONTH</label>
+          <input type="text" id="month" maxlength="2" pattern="^(0?[1-9]|1[012])$" title="Please enter a valid month (1-12)" placeholder="MM" required/>
+          <p id='monthError' class="errorMessage"></p>
+        </div>
+        <div class="input" for="dayInput">
+          <label for="year">YEAR</label>
+          <input type="text" id="year" maxlength="4" title="Please enter a valid year (not the future years)" placeholder="YYYY" required/>
+          <p id='yearError' class="errorMessage"></p>
+        </div>
 
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
+      <button type="submit"  >
+      <img src="./assets/images/icon-arrow.svg" style="color:blueviolet"/>
+      </button>
+      </form>
+    </section>
+    
+    <hr/>
+    
+    <!-- <section>
+      <hr/>
+    </section> -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <section class="displayResults">
+  
+      <div id="displayYears">
+        <span>--</span>
+        <span>years</span>
+      </div>
+      <div id="displayMonths">
+        <span>--</span>
+        <span>months</span>
+      </div>
+      <div id="displayDays">
+        <span>--</span>
+        <span>days</span>
+      </div>
+    </section>
   </div>
 </body>
+
+<script src="script.js"></script>
 </html>
+

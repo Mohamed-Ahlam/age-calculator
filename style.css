@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Poppins'; /* You can choose any name for the font family */
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./assets//fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800; 
+    font-style: normal;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+}
+body{
+    background-color: hsl(0, 0%, 86%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.flex{
+    border: 5px solid black;
+
+    background-color: hsl(0, 100%, 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+
+
+    width: 50%;
+    height: 50%;
+
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+    /* gap: 20px; */
+    color: hsl(0, 1%, 44%);
+    margin-bottom: 5%;
+}
+
+button{
+    display: block;
+}
+
+div > label{
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    margin-bottom:5px;
+}
+div > input{
+    font-size: 1.5rem;
+    font-weight: 700; 
+
+    width:140px;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 5px; 
+
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5px;
+
+}
+
+div > input:focus{
+    border-color: hsl(259, 100%, 65%);
+    outline: none;
+
+}
+
+/* targets the inputs border */
+.error{
+    border-color: hsl(0, 100%, 67%);
+    outline: none;
+}
+/* targets the p element underneeth input */
+.errorMessage {
+    height: 2rem; /* Reserve space */
+    color: red;
+    font-size: 0.7rem;
+    font-style: italic;
+    visibility: hidden; /* Keeps space reserved */
+  }
+  
+  .errorMessage.visible {
+    visibility: visible; /* Show error without shifting layout */
+  }
+  
+
+/* 
+2. for form
+    - how to have it horizontal
+    - how to have label above input 
+    - how to style input box 
+3. how to include the purple image 
+1. how to make the container into the middle lf the page
+*/
+
